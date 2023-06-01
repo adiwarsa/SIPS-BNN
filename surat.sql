@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 01, 2023 at 10:33 AM
+-- Generation Time: Jun 01, 2023 at 03:43 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.5
 
@@ -56,7 +56,10 @@ INSERT INTO `disposisi` (`id`, `kepada`, `tenggat`, `disposisi_kbnn`, `disposisi
 (49, 'Rehabilitasi', '2023-04-13', 'asdasd', NULL, 2, 2, 2, '2023-04-12 23:44:59', '2023-04-12 23:44:59'),
 (52, 'Umum', '2023-04-27', 'Test aja bank', NULL, 1, 20, 2, '2023-04-29 23:52:33', '2023-04-29 23:52:33'),
 (53, 'Pemberantasan', '2023-04-27', 'Test aja bank', NULL, 1, 20, 2, '2023-04-29 23:52:33', '2023-04-29 23:52:33'),
-(54, 'Rehabilitasi', '2023-04-27', 'Test aja bank', NULL, 1, 20, 2, '2023-04-29 23:52:33', '2023-04-29 23:52:33');
+(54, 'Rehabilitasi', '2023-04-27', 'Test aja bank', NULL, 1, 20, 2, '2023-04-29 23:52:33', '2023-04-29 23:52:33'),
+(55, 'P2M', '2023-05-02', 'Laksanakan!', 'Laksanakan untuk anggota P2M', 1, 21, 2, '2023-05-01 05:42:06', '2023-05-01 05:42:20'),
+(56, 'Pemberantasan', '2023-05-02', 'Laksanakan!', NULL, 1, 21, 2, '2023-05-01 05:42:06', '2023-05-01 05:42:06'),
+(57, 'Humas', '2023-05-02', 'Laksanakan!', NULL, 1, 21, 2, '2023-05-01 05:42:06', '2023-05-01 05:42:06');
 
 -- --------------------------------------------------------
 
@@ -93,15 +96,9 @@ CREATE TABLE `kepada_surat` (
 --
 
 INSERT INTO `kepada_surat` (`id`, `surat_id`, `pegawai_id`, `created_at`, `updated_at`) VALUES
-(5, 52, 1, '2023-05-01 01:15:14', '2023-05-01 01:15:14'),
-(6, 52, 7, '2023-05-01 01:15:14', '2023-05-01 01:15:14'),
-(7, 53, 1, '2023-05-01 01:30:40', '2023-05-01 01:30:40'),
-(8, 53, 7, '2023-05-01 01:30:40', '2023-05-01 01:30:40'),
-(9, 53, 8, '2023-05-01 01:30:40', '2023-05-01 01:30:40'),
-(10, 53, 9, '2023-05-01 01:30:40', '2023-05-01 01:30:40'),
-(20, 55, 1, '2023-05-01 02:12:01', '2023-05-01 02:12:01'),
-(21, 55, 9, '2023-05-01 02:12:01', '2023-05-01 02:12:01'),
-(22, 55, 7, '2023-05-01 02:12:01', '2023-05-01 02:12:01');
+(26, 58, 1, '2023-05-01 05:37:32', '2023-05-01 05:37:32'),
+(27, 58, 8, '2023-05-01 05:37:32', '2023-05-01 05:37:32'),
+(28, 63, 7, '2023-05-31 03:26:53', '2023-05-31 03:26:53');
 
 -- --------------------------------------------------------
 
@@ -158,10 +155,10 @@ CREATE TABLE `pegawai` (
 --
 
 INSERT INTO `pegawai` (`id`, `nama`, `nip`, `jabatan`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Purge', '520192382112', 'Sekretaris', 'PNS', '2023-04-07 18:46:25', '2023-05-01 01:27:12'),
+(1, 'Purge', '520192382112', 'Sekretaris', 'ASN', '2023-04-07 18:46:25', '2023-05-01 01:27:12'),
 (7, 'Tuturu', NULL, 'Staff', 'Kontrak', '2023-04-30 22:27:20', '2023-04-30 22:27:20'),
 (8, 'Tapaluna', NULL, 'Staff', 'Kontrak', '2023-05-01 01:26:29', '2023-05-01 01:26:29'),
-(9, 'Tapanuli', '10847287173', 'Penyuluh Narkoba', 'PNS', '2023-05-01 01:27:03', '2023-05-01 01:27:03');
+(9, 'Tapanuli', '10847287173', 'Penyuluh Narkoba', 'ASN', '2023-05-01 01:27:03', '2023-05-01 01:27:03');
 
 -- --------------------------------------------------------
 
@@ -220,22 +217,12 @@ CREATE TABLE `surat_keluar` (
 --
 
 INSERT INTO `surat_keluar` (`id`, `user_id`, `kategori`, `bidang`, `no_surat`, `type`, `hal`, `sifat`, `topik`, `sebagai`, `kepada`, `isi`, `isilain`, `kesimpulan`, `tanggal_pelaksanaan`, `tempat`, `mulai`, `selesai`, `menimbang`, `untuk`, `dasar`, `status`, `tanggal_surat`, `created_at`, `updated_at`) VALUES
-(9, 2, 'Undangan', 'Bidang P2M Cegah', 'B/002/V/Ka/PC.01/2022/BNNP-BALI', 'Biasa', 'Pembicara', 1, 'Sistem Informasi Ajaah', 'Pemateri', 'Bidang Masyarakat', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,', NULL, NULL, '2023-04-12', 'rawr', '02:45:00', '00:46:00', '', '', '', 1, '2023-04-13', '2023-04-11 08:45:44', '2023-05-01 01:39:23'),
-(10, 2, 'Undangan', '', 'B/003/V/Ka/PC.01/2022/BNNP-BALI', 'Biasa', 'we', 1, 'wa', 'Pemateri', 'Bidang Masyarakat', 'waw\r\nwaw\r\nawaw\r\nAwaw', NULL, NULL, '2023-04-11', 'raw', '02:35:00', '02:35:00', '', '', '', 0, '2023-04-12', '2023-04-11 09:34:38', '2023-04-30 01:51:06'),
-(11, 2, 'Undangan', '', 'B/004/V/Ka/PC.01/2022/BNNP-BALI', 'Biasa', 'wa', 1, 'we', 'Pemateri', 'JenderalSudimara', 'A<br />\r\nb<br />\r\nc', NULL, NULL, '2023-04-11', 'raw', '02:42:00', '02:42:00', '', '', '', 0, '2023-04-12', '2023-04-11 09:42:19', '2023-04-11 09:42:19'),
-(12, 2, 'Undangan', 'Bidang Rehabilitasi', 'B/008/IV/Ka/KU.06.01/2023/BNNP-Bali', 'Biasa', 'wasa', 1, 'dsa', 'Pemateri', 'raaaaaa', '. melaksanakan Kegiatan Koordinasi Persiapan Pengembangan Soft Skill di SMA Negeri 1 Kediri Kabupaten Tabanan pada tanggal 11 April 20222. melaporkan hasil pelaksanaannya kepada Kepala BNNP3. melaksanakan tugas ini dengan sebaik-baiknya dan dengan penuh rasa tanggungjawab.', NULL, NULL, '2023-04-12', 'arrrrrrrr', '02:48:00', '01:48:00', '', '', '', 0, '2023-04-12', '2023-04-11 09:47:53', '2023-04-20 07:20:41'),
-(19, 2, NULL, 'Bidang P2M Cegah', 'Sprin/006/III/KA/RH.00.00/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Test test test testter<br />\r\nTest aja brok<br />\r\nTest aja cok dah dblg', '1. Test test test testraw<br />\r\n1. Test test test testraw<br />\r\n1. Test test test testqas<br />\r\n1. Test test test testrewww', '3. Test test test testraw<br />\r\n4. Test test test testraw<br />\r\n5. Tarararara qo', 0, '2023-04-21', '2023-04-20 06:24:22', '2023-04-30 22:09:01'),
-(20, 2, 'Undangan', 'Bidang P2M Cegah', 'B/007/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'Pembicara', 1, 'Sistem Informasi Ajaah', 'Pemateri', 'Satrianto Ariardi', 'Abogoboga', NULL, NULL, '2023-04-28', 'Jl. Bogorrr', '22:46:00', '02:52:00', '', '', '', 0, '2023-04-21', '2023-04-20 06:47:08', '2023-04-20 06:48:03'),
-(21, 2, 'Undangan', 'Bidang P2M Cegah', 'B/008II/KA/PC.01/2023/BNNP-Bali', 'Biasa', 'Pidato', 2, 'Narkoba Untuk Bangsa', 'Pemateri', 'Nyoman Suayana', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,', NULL, NULL, '2023-04-20', 'Gor Ngurah Rai', '23:34:00', '03:39:00', '', '', '', 0, '2023-04-20', '2023-04-20 07:34:40', '2023-04-20 07:34:40'),
-(22, 2, 'Undangan', 'Bidang Umum', 'B/009/II/KA/KP.03.01/2023/BNNP-Bali', 'Biasa', 'Pembicara', 1, 'rara rere', 'Peserta', 'Bidang Masyarakat', 'Aku adalah anak gembala selalu riang serta gembira, karena aku senang bekerja tak pernah malas ataupun lelah, la lala lala la la la la la lala lalala. Balonku ada lima rupa rupa warnanya hijau kuning kelabu merah muda dan biru meletus balon hijau dar hatiku sangat kacau balonku tinggal empat ku pegang erat erat ea eae a ea eae ae ae a ea eae ae aea ea ea ea ea ea ea eaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee kita bisa', NULL, NULL, '2023-04-21', 'Gorontalo', '10:19:00', '12:17:00', '', '', '', 0, '2023-04-22', '2023-04-20 18:17:17', '2023-04-20 18:17:17'),
-(33, 2, 'Undangan', 'Bidang P2M Pemberdayaan Masyarakat', 'B/010/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'wawa', 1, 'wawan', 'Pemateri', 'wewe', 'wawan', NULL, NULL, '2023-04-30', 'rarararara', '15:45:00', NULL, '', '', '', 1, '2023-04-04', '2023-04-29 23:45:19', '2023-04-29 23:45:19'),
-(35, 2, 'Lain', 'Bidang P2M Pemberdayaan Masyarakat', 'B/011/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'Pembicara', 1, 'Sistem Informasi Ajaah', 'Peserta', 'JenderalSudimara', NULL, 'Iya kita sangatlah bebas jalani hidup kita mimpi kita satu judi kita satu one hear one hear satu langganan bersama satu hati wkakwkwakwoakwoak nyoba tes aja ngawur wkowkowk cepet kek asidaldkjsa', 'Demikian dengan surat ini abjgasdacw22', NULL, NULL, NULL, NULL, '1. Kami putra dan putri indoneisa mengaku berbahasa satu bahasa indonesia<br />\n2. kami putra dan putri indonesia mengaku bertumpah darah satu tumpah darah indonesia<br />\n3. kami putra dan putri indonesia mengaku berbangsa satu bangsa indonesia', '', '', 1, '2023-05-10', '2023-04-30 21:21:30', '2023-04-30 21:38:40'),
-(36, 2, 'Lain', 'Bidang P2M Pemberdayaan Masyarakat', 'B/012/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'Pembicara', 1, 'Sistem Informasi Surat', 'Pemateri', 'Bidang Masyarakat', NULL, 'asdadererere', 'asdasdasd', NULL, NULL, NULL, NULL, 'Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 13 Tahun 2014 tentang Perubahan Atas Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 1 Tahun 2013 tentang Penugasan Anggota Kepolisian Negara Republik Indonesia di Luar Struktur Organisasi Kepolisian Negara Republik Indonesia.<br />\nSurat Perintah Kapolri Nomor : Sprin/1251/V/KEP./2018 tanggal 15 Mei 2018 tentang Penugasan Dilingkungan Badan Narkotika Nasional Republik Indonesia sebagai Kepala Bagian Umum Badan Narkotika Nasional Provinsi Bali.<br />\nSurat Keputusan Kepala Badan Narkotika Nasional Nomor : KEP/136/III/SU/KP.02.00.2017/BNN tentang Pemberhentian dan Pengangkatan dari dan Dalam Jabatan di Lingkungan Badan Narkotika Nasional.', '', '', 1, '2023-05-10', '2023-04-30 21:33:58', '2023-04-30 21:53:16'),
-(48, 2, NULL, 'Bidang P2M Cegah', 'Sprin/012/III/KA/PC.01/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ara', 'rara', 'rara', 1, '2023-05-08', '2023-05-01 01:09:14', '2023-05-01 01:09:14'),
-(52, 2, NULL, 'Bidang P2M Pemberdayaan Masyarakat', 'Sprin/013/III/KA/PM.00/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 13 Tahun 2014 tentang Perubahan Atas Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 1 Tahun 2013 tentang Penugasan Anggota Kepolisian Negara Republik Indonesia di Luar Struktur Organisasi Kepolisian Negara Republik Indonesia.<br />\r\nSurat Perintah Kapolri Nomor : Sprin/1251/V/KEP./2018 tanggal 15 Mei 2018 tentang Penugasan Dilingkungan Badan Narkotika Nasional Republik Indonesia sebagai Kepala Bagian Umum Badan Narkotika Nasional Provinsi Bali.<br />\r\nSurat Keputusan Kepala Badan Narkotika Nasional Nomor : KEP/136/III/SU/KP.02.00.2017/BNN tentang Pemberhentian dan Pengangkatan dari dan Dalam Jabatan di Lingkungan Badan Narkotika Nasional.', 'asdasdas', '3. Abcedjlakjsgkljasflkjas<br />\r\n4. wakhdskjahkjhehehehe', 1, '2023-05-08', '2023-05-01 01:15:14', '2023-05-01 01:15:14'),
-(53, 2, NULL, 'Bidang P2M Pemberdayaan Masyarakat', 'Sprin/014/III/KA/PM.00/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 13 Tahun 2014 tentang Perubahan Atas Peraturan Kepala Kepolisian Negara Republik Indonesia Nomor 1 Tahun 2013 tentang Penugasan Anggota Kepolisian Negara Republik Indonesia di Luar Struktur Organisasi Kepolisian Negara Republik Indonesia.<br />\r\nSurat Perintah Kapolri Nomor : Sprin/1251/V/KEP./2018 tanggal 15 Mei 2018 tentang Penugasan Dilingkungan Badan Narkotika Nasional Republik Indonesia sebagai Kepala Bagian Umum Badan Narkotika Nasional Provinsi Bali.<br />\r\nSurat Keputusan Kepala Badan Narkotika Nasional Nomor : KEP/136/III/SU/KP.02.00.2017/BNN tentang Pemberhentian dan Pengangkatan dari dan Dalam Jabatan di Lingkungan Badan Narkotika Nasional.', 'asreewww', '3. aksjdkajsdkajsd<br />\r\n4. aksdjaksdj', 1, '2023-05-11', '2023-05-01 01:30:40', '2023-05-01 01:30:40'),
-(55, 2, NULL, 'Bidang P2M Cegah', 'Sprin/015/III/KA/PC.01/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'purge isindahaus', 'asdre', 'recc', 1, '2023-05-10', '2023-05-01 01:49:30', '2023-05-01 02:12:01'),
-(57, 2, 'Undangan', 'Bidang Rehabilitasi', 'B/016/IV/Ka/KU.06.01/2023/BNNP-Bali', 'Biasa', 'Pembicara', 2, 'Sistem Informasi Ajaah', 'Peserta', 'Bidang Masyarakat', 'Abogoboga', NULL, NULL, '2023-05-12', 'Cileungsi', '18:14:00', NULL, '', '', '', 1, '2023-05-11', '2023-05-01 02:14:54', '2023-05-01 02:14:54');
+(58, 2, NULL, 'Bidang P2M Cegah', 'Sprin/001/III/KA/PM.00/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry.<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry.', 1, '2023-05-01', '2023-05-01 05:34:25', '2023-05-02 01:02:28'),
+(59, 2, 'Lain', 'Bidang Rehabilitasi', 'B/002/IV/Ka/KU.06.01/2023/BNNP-Bali', 'Biasa', 'Seminar Terbuka', 1, 'Taktaulah', 'Pemateri', 'Ir.Irianto S.Pd., M.Pd.', NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book', 'Dengan demikian blabla', NULL, NULL, NULL, NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book', '', '', 1, '2023-05-01', '2023-05-01 05:35:34', '2023-05-01 05:38:15'),
+(60, 2, 'Undangan', 'Bidang Humas', 'B/003/ll/Ka/BU.00.00/2023/BNNP-Bali', 'Biasa', 'Nasabah Kita Bersama', 1, 'Taraktampolinn', 'Peserta', 'Jokowi Dodo', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book', NULL, NULL, '2023-05-17', 'BNDCC Nusa Dua', '11:00:00', NULL, '', '', '', 1, '2023-05-01', '2023-05-01 05:36:48', '2023-05-01 05:39:16'),
+(61, 2, 'Lain', 'Bidang P2M Pemberdayaan Masyarakat', 'B/004/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'Tarataktul', NULL, NULL, 'Pemateri', 'Bidang Masyarakat', NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500sasdmnbasmnbd mnabsmdnbamns', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', NULL, NULL, NULL, NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s<br />\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', '', '', 1, '2023-05-03', '2023-05-02 00:52:35', '2023-05-02 00:52:35'),
+(62, 2, 'Undangan', 'Bidang P2M Pemberdayaan Masyarakat', 'B/005/II/KA/PM.01/2023/BNNP-Bali', 'Biasa', 'Pembicara Nasabah Bank', NULL, 'Bank BRI Pusat', 'Pemateri', 'JenderalTarampolin', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', NULL, NULL, '2023-05-04', 'BNDCC Nusa Dua', '11:00:00', NULL, '', '', '', 1, '2023-05-03', '2023-05-02 00:53:38', '2023-05-02 00:53:38'),
+(63, 2, NULL, 'Bidang P2M Cegah', 'Sprin/006/III/KA/PC.01/2023/BNNP-BALI', 'Sprin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'asdasda', 'asdasd', 'asdasdasd', 1, '2023-05-03', '2023-05-31 03:26:53', '2023-05-31 03:26:53');
 
 -- --------------------------------------------------------
 
@@ -264,9 +251,7 @@ CREATE TABLE `surat_masuk` (
 --
 
 INSERT INTO `surat_masuk` (`id`, `no_surat`, `dari`, `kepada`, `tanggal_surat`, `tanggal_terima`, `perihal`, `keterangan`, `file`, `id_klasifikasi`, `user_id`, `created_at`, `updated_at`) VALUES
-(2, '074.A/DIRAKAKEM/WRI/ITBSTIKOM/II/22', 'Saya', 'Jenderal', '2023-03-15', '2023-03-23', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel nunc vitae diam auctor viverra. Nulla in lectus nec ligula gravida porta. Nulla rutrum convallis mollis.', 'wq', NULL, NULL, 2, '2023-03-23 04:41:54', '2023-03-23 08:02:56'),
-(17, '074.A/DIRAKAKEM/WRI/ITBSTIKOM/II/26', 'Terra', 'asd', '2023-03-30', '2023-03-30', 'Perihal GEge', 'Teras', '1680230257_surat_undangan_lampiran.pdf', NULL, 2, '2023-03-30 18:37:37', '2023-03-30 18:37:37'),
-(19, '074.A/TES/SRM/JOVAN/II/22s', 'Saya', 'Bidang Masyarakat', '2023-04-11', '2023-04-11', 'wea', 'wa', '1681089284_Tugas1_190030581.pdf', NULL, 2, '2023-04-09 17:14:44', '2023-04-09 17:14:44');
+(21, '074.A/DIRAKAKEM/WRI/ITBSTIKOM/II/22', 'STIKOM Bali', 'Kepala Direktur BNN', '2023-04-30', '2023-05-01', 'Surat Terkait KP', 'Penting!', '1682948494_1181-Article Text-1881-1-10-20230227.pdf', NULL, 2, '2023-05-01 05:41:34', '2023-05-01 05:41:34');
 
 -- --------------------------------------------------------
 
@@ -291,10 +276,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'adi', 'adi@gmail.com', 'Admin', '2023-03-20 22:44:21', '$2y$10$rP7sc/cpRtqm/Uca3D0/rO4n52DH2zEQ/xYXzSqz7Uj6W5M2Wj29C', 'pZtY57N7qO4NKiyOlzy8zT7ORG0yThkgYk5iQdYFeBcoGcNolD0JaKluhO1T', '2023-03-20 22:44:21', '2023-03-20 22:44:21'),
+(2, 'adi', 'adi@gmail.com', 'Admin', '2023-03-20 22:44:21', '$2y$10$rP7sc/cpRtqm/Uca3D0/rO4n52DH2zEQ/xYXzSqz7Uj6W5M2Wj29C', 'e0KibR5SHApdgyuMd2oc4uDSJUSdQRTdqewqDIGpxfwFbi6B5grp7DShgmpl', '2023-03-20 22:44:21', '2023-03-20 22:44:21'),
 (4, 'jovans', 'jovan@gmail.com', 'Pegawai', NULL, '$2y$10$rP7sc/cpRtqm/Uca3D0/rO4n52DH2zEQ/xYXzSqz7Uj6W5M2Wj29C', NULL, '2023-03-21 02:49:24', '2023-03-27 01:41:16'),
-(5, 'jovans', 'asd@gmail.com', 'Pegawai', '2023-03-21 02:49:47', '$2y$10$lJ8/JNlk2pd7Mdil/cgkN.lxdfYj/VcTvR7Eiw92VW6cHDwHVq36S', NULL, '2023-03-21 02:49:47', '2023-04-28 16:48:02'),
-(6, 'tarata', 'tarataktum@gmail.com', 'Pegawai', NULL, '$2y$10$coXDcd9.TWbhWtaNtk12EeMet5ZsOgf7sg7mhbHdvlNr.Yl2qEqUa', NULL, '2023-04-28 18:15:03', '2023-04-29 21:09:18');
+(5, 'jovans', 'asd@gmail.com', 'Pegawai', '2023-03-21 02:49:47', '$2y$10$lJ8/JNlk2pd7Mdil/cgkN.lxdfYj/VcTvR7Eiw92VW6cHDwHVq36S', NULL, '2023-03-21 02:49:47', '2023-04-28 16:48:02');
 
 --
 -- Indexes for dumped tables
@@ -374,7 +358,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `disposisi`
 --
 ALTER TABLE `disposisi`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -386,7 +370,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `kepada_surat`
 --
 ALTER TABLE `kepada_surat`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -398,7 +382,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -410,13 +394,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `surat_keluar`
 --
 ALTER TABLE `surat_keluar`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`
