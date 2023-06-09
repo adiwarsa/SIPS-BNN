@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 	<div class="app-brand demo justify-content-center">
-		<img style="max-width: 100%; max-height: 100%;" src="{{ asset('assets/img/elements/bnn.png') }}" alt="">
+		<img style="max-width: 100%; max-height: 100%;" src="{{ asset('assets/img/elements/logo-bnn-2.png') }}" alt="">
 	</div>
 
 	<div class="menu-inner-shadow"></div>

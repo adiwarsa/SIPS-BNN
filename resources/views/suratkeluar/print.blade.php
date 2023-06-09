@@ -26,7 +26,7 @@
 	<center>
 		<table>
 			<tr>
-				<td style="text-align: center"><img style="display:block;" src="{{ asset('assets/img/elements/bnn.png') }}" width="150" height="90">
+				<td style="text-align: center"><img style="display:block; padding-left: 15px;" src="{{ asset('assets/img/elements/logo-bnn-2.png') }}" width="80" height="80">
                     <font size="3"><b>PROVINSI BALI</b></font></td>
                 <td>
 				

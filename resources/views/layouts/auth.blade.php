@@ -22,8 +22,10 @@
 
 	<meta name="description" content="" />
 
-	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon-16x16.png') }}" />
+	<!-- Icon -->
+	<link rel="icon" href="https://denpasarkota.bnn.go.id/konten/unggahan/2019/03/cropped-bnn-512x512-100x100.png" sizes="32x32"/>
+	<link rel="icon" href="https://denpasarkota.bnn.go.id/konten/unggahan/2019/03/cropped-bnn-512x512-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon" href="https://denpasarkota.bnn.go.id/konten/unggahan/2019/03/cropped-bnn-512x512-300x300.png"/>
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,7 +68,7 @@
 							<a href="/" class="app-brand-link gap-2">
 								
 								<span class="app-brand-text demo text-body fw-bolder">
-							<img style="heigh:150px; width:150px; max-width: 100%; max-height: 100%;" src="{{ asset('assets/img/elements/bnn.png') }}" alt="">
+							<img style="heigh:150px; width:150px; max-width: 100%; max-height: 100%;" src="{{ asset('assets/img/elements/logo-bnn-2.png') }}" alt="">
 								</span>
 							</a>
 						</div>
