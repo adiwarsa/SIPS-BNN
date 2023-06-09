@@ -16,7 +16,7 @@
 		<tbody>
 			@forelse($surat as $suratmasuk)
 			<tr>
-				<td>{{ $suratmasuk->id }}</td>
+				<td>{{ $loop->iteration }}</td>
 				<td><a href="{{ route('suratmasuk.show', $suratmasuk->id) }}">{{ $suratmasuk->no_surat }}</a></td>
 				<td>{{ $suratmasuk->dari }}</td>
                 <td>{{ $suratmasuk->kepada }}</td>

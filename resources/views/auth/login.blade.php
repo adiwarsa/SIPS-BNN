@@ -1,6 +1,6 @@
 <x-auth-layout title="SIPS BNN - Masuk">
-	<h4 class="mb-2">{{ __('Selamat Datang! 👋') }}</h4>
-	<p class="mb-4">
+	<h4 class="mb-2 text-center">{{ __('Selamat Datang! 👋') }}</h4>
+	<p class="mb-4 text-center">
 		{{ __('Silahkan masuk terlebih dahulu untuk melanjutkan') }}
 	</p>
 
@@ -14,11 +14,6 @@
 		<div class="mb-3 form-password-toggle">
 			<div class="d-flex justify-content-between">
 				<x-label for="password" :value="__('Password')" />
-				{{-- @if (Route::has('password.request'))
-				<a href="{{ route('password.request') }}">
-					<small>{{ __('Forgot password?') }}</small>
-				</a>
-				@endif --}}
 			</div>
 			<div class="input-group input-group-merge">
 				<x-input type="password" name="password" id="password" :placeholder="__('Password')" aria-describedby="password" />

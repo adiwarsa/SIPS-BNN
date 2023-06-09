@@ -15,14 +15,18 @@
 			@forelse($surat as $suratkeluar)
 			<tr>
 				<td>{{ $loop->iteration }}</td>
+			@if($suratkeluar->status == 1)
 				<td>{{ $suratkeluar->no_surat }}</td>
+			@else
+				<td class="text-center"> - </td>
+			@endif
                 <td>{{ $suratkeluar->type }}</td>
-					@if($suratkeluar->type == 'Sprin')
+			@if($suratkeluar->type == 'Sprin')
 				<td>Surat Perintah</td>
-					@else
+			@else
 				<td>{{ $suratkeluar->kategori }}</td>
 				
-					@endif
+			@endif
 				@if (auth()->user()->role == 'Admin')
 				<td>
 					<button class="btn-edit btn btn-info btn-sm bg-{{ $suratkeluar->status == 0 ? 'danger' : 'success' }}" data-bs-toggle="modal" data-bs-target="#editModal{{ $suratkeluar->id }}">
@@ -37,12 +41,14 @@
 				</td>
 				@endif
 				<td>{{ $suratkeluar->formatted_tanggal_surat }}</td>
-				<td>
+				<td class="text-center">
+				@if($suratkeluar->status == 1)
 					@if ($suratkeluar->type == 'Sprin')
 					{!! actionBtn(route('suratkeluar.printsprint', $suratkeluar->id), 'success', 'printer', ["target='_blank'"]) !!}
 					@else
 					{!! actionBtn(route('suratkeluar.print', $suratkeluar->id), 'success', 'printer', ["target='_blank'"]) !!}
 					@endif
+				@endif
 					
                     {!! actionBtn(route('suratkeluar.edit', $suratkeluar->id), 'info', 'edit') !!}
 					{!! actionBtn(route('suratkeluar.delete', $suratkeluar->id), 'danger', 'trash', ["onclick='del(this)'"]) !!}
