@@ -283,4 +283,14 @@
 		mulaiInput.querySelector('input[type="time"]').required = false;
     }
 }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputTanggalSurat = document.getElementById('tanggal_surat');
+        
+        // Mengambil data hari ini dengan  YYYY-MM-DD format
+        const currentDate = new Date().toISOString().split('T')[0];
+        
+        // Set input tanggal surat
+        inputTanggalSurat.value = currentDate;
+    });
 	</script>

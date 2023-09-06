@@ -24,8 +24,9 @@ class DatabaseSeeder extends Seeder
 		User::factory(10)->create();
 		$data = [
 			[
-				'name' => 'User',
-				'email' => 'user@app.com',
+				'name' => 'Admin',
+				'email' => 'admin@gmail.com',
+				'role' => 'Admin',
 				'password' => Hash::make('password'),
 				'email_verified_at' => now(),
 			]
